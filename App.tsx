@@ -202,6 +202,7 @@ function CardInteraction() {
                 style={[
                   styles.iconWrapper,
                   {
+                    backgroundColor: "#fee2e2",
                     right: 115,
                   },
                 ]}
@@ -244,6 +245,7 @@ function CardInteraction() {
             style={[
               styles.iconWrapper,
               {
+                backgroundColor: "#f1f1f1",
                 right: 0,
               },
             ]}
@@ -333,7 +335,6 @@ const styles = StyleSheet.create({
     borderRadius: 999,
     height: 32,
     width: 32,
-    backgroundColor: "#fee2e2",
     alignItems: "center",
     justifyContent: "center",
     position: "absolute",
