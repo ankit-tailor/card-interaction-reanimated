@@ -172,34 +172,18 @@ function CardInteraction() {
             }}
           >
             <Animated.View
-              style={{
-                paddingHorizontal: 12,
-                height: 32,
-                borderRadius: 20,
-                borderColor: "#737373",
-                borderWidth: 1,
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+              style={styles.button}
               entering={slideUp}
               exiting={slideDown}
             >
-              <Text style={{ color: "#404040", fontWeight: "700" }}>Lunch</Text>
+              <Text style={styles.text}>Lunch</Text>
             </Animated.View>
             <Animated.View
-              style={{
-                paddingHorizontal: 12,
-                height: 32,
-                alignItems: "center",
-                justifyContent: "center",
-                borderRadius: 20,
-                borderColor: "#D4D4D4",
-                borderWidth: 1,
-              }}
+              style={styles.button}
               entering={slideUp}
               exiting={slideDown}
             >
-              <Text style={{ fontWeight: "700", color: "#737373" }}>Snack</Text>
+              <Text style={styles.text}>Snack</Text>
             </Animated.View>
           </View>
         </AnimateHeight>
@@ -215,16 +199,12 @@ function CardInteraction() {
           <>
             {!isExpanded && (
               <AnimatedPressable
-                style={{
-                  borderRadius: 999,
-                  height: 32,
-                  width: 32,
-                  backgroundColor: "#fee2e2",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  position: "absolute",
-                  right: 115,
-                }}
+                style={[
+                  styles.iconWrapper,
+                  {
+                    right: 115,
+                  },
+                ]}
                 entering={slideLeft}
               >
                 <Feather name="trash-2" size={16} color="#dc2626" />
@@ -261,16 +241,12 @@ function CardInteraction() {
         )}
         {!isExpanded && (
           <AnimatedPressable
-            style={{
-              borderRadius: 999,
-              height: 32,
-              width: 32,
-              backgroundColor: "#f1f1f1",
-              alignItems: "center",
-              justifyContent: "center",
-              position: "absolute",
-              right: 0,
-            }}
+            style={[
+              styles.iconWrapper,
+              {
+                right: 0,
+              },
+            ]}
             onPress={() => {
               setShowInfo((prev) => !prev);
             }}
@@ -339,5 +315,27 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     borderRadius: 10,
+  },
+  button: {
+    paddingHorizontal: 12,
+    height: 32,
+    borderRadius: 20,
+    borderColor: "#737373",
+    borderWidth: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  text: {
+    color: "#404040",
+    fontWeight: "700",
+  },
+  iconWrapper: {
+    borderRadius: 999,
+    height: 32,
+    width: 32,
+    backgroundColor: "#fee2e2",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "absolute",
   },
 });
