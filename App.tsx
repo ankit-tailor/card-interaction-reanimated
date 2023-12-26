@@ -15,7 +15,7 @@ import {
 import React, { useState } from "react";
 import { AnimateHeight } from "./components/AnimatedHeight";
 import { Entypo, AntDesign, Feather } from "@expo/vector-icons";
-import AnimatedKeyboardExample from "./components/AnimatedKeyboard";
+import AnimatedKeyboard from "./components/AnimatedKeyboard";
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 const AnimatedAntd = Animated.createAnimatedComponent(AntDesign);
@@ -279,9 +279,9 @@ export default function App() {
       }}
     >
       <SafeAreaView />
-      <AnimatedKeyboardExample>
+      <AnimatedKeyboard>
         <CardInteraction />
-      </AnimatedKeyboardExample>
+      </AnimatedKeyboard>
     </View>
   );
 }
