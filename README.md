@@ -20,11 +20,9 @@ yarn web
 yarn android
 
 # For ios
-
-https://github.com/ankit-tailor/card-interaction-reanimated/assets/44310861/6af19e25-f99d-4534-8e59-9350abe37094
-
-
 yarn ios
 ```
 
 ## Demo
+
+https://github.com/ankit-tailor/card-interaction-reanimated/assets/44310861/6af19e25-f99d-4534-8e59-9350abe37094
