@@ -16,6 +16,7 @@ import React, { useState } from "react";
 import { AnimateHeight } from "./components/AnimatedHeight";
 import { Entypo, AntDesign, Feather } from "@expo/vector-icons";
 import AnimatedKeyboard from "./components/AnimatedKeyboard";
+import { StatusBar } from "expo-status-bar";
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 const AnimatedAntd = Animated.createAnimatedComponent(AntDesign);
@@ -271,20 +272,21 @@ function CardInteraction() {
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        padding: 32,
-        justifyContent: "center",
-        marginTop: 40,
-        backgroundColor: "#f1f1f1",
-      }}
-    >
-      <SafeAreaView />
-      <AnimatedKeyboard>
-        <CardInteraction />
-      </AnimatedKeyboard>
-    </View>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#f1f1f1' }}>
+      <View
+        style={{
+          flex: 1,
+          padding: 32,
+          justifyContent: "center",
+          marginTop: 40,
+          backgroundColor: "#f1f1f1",
+        }}
+      >
+        <AnimatedKeyboard>
+          <CardInteraction />
+        </AnimatedKeyboard>
+      </View>
+    </SafeAreaView>
   );
 }
 
