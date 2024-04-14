@@ -24,3 +24,7 @@ yarn ios
 ```
 
 ## Demo
+
+https://github.com/ankit-tailor/card-interaction-reanimated/assets/44310861/07f9d87c-cab7-4f3a-909d-7bf788d351d5
+
+
